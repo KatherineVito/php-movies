@@ -40,6 +40,12 @@ class PhpMovies
     public function getCategories(): array
     {
         return $this->categories;
+    }
 
+    public function sortMovies(): array
+    {
+        $sorted = $this->movies;
+        sort($sorted);
+        return $sorted;
     }
 }
