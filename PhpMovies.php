@@ -3,6 +3,7 @@
 class PhpMovies
 {
     private array $movies = [];
+    private array $categories = [];
 
     public function helloWorld(): string
     {
@@ -23,5 +24,21 @@ class PhpMovies
     public function getMovies(): array
     {
         return $this->movies;
+
+    public function addCategory(string $category): void
+    {
+        $category = trim($category);
+
+        if ($category === '') {
+            throw new InvalidArgumentException('La categoria no puede estar vacia.');
+        }
+
+        $this->categories[] = $category;
+    }
+
+    public function getCategories(): array
+    {
+        return $this->categories;
+
     }
 }
