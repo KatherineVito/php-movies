@@ -13,6 +13,26 @@ Proyecto PHP de ejemplo para gestionar peliculas.
 - Permite listar las categorias registradas con `getCategories()`.
 - Permite eliminar categorias con `removeCategory(string $category)`.
 
+### Estructura
+
+```
+index.php
+    |
+    v
++---------------------------+
+|       PhpMovies           |
+|---------------------------|
+| - movies: []              |
+| - categories: []          |
+|---------------------------|
+| + addMovie(title)         |
+| + getMovies()             |
+| + addCategory(category)   |
+| + getCategories()         |
+| + helloWorld()            |
++---------------------------+
+```
+
 ### Ejemplo
 
 ```php
