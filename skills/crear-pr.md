@@ -31,9 +31,9 @@ git commit -m "mensaje del commit"
 git push -u origin nombre-de-rama
 ```
 
-8. Crea el PR en modo draft. El titulo del pr es el nombre de la branch y el body sera el commit.
+8. Crea el PR en modo draft usando `templates/pr-template.md` como base para el body. Completa el numero de ticket, `Description`, `Steps` y `Notes` en un archivo temporal y usa ese archivo para crear el PR. El titulo del PR sera el nombre de la branch.
 ```bash
-gh pr create --draft --title "titulo del pr" --body "descripcion del pr"
+gh pr create --draft --title "titulo-del-pr" --body-file archivo-temporal-del-pr.md
 ```
 
 9. Abrir el PR creado
@@ -48,3 +48,7 @@ gh pr view --web
 - Si hay errores al ejecutar `revisar-errores`, corrígelos antes de hacer commit y push.
 - Si faltan datos para el título o cuerpo del PR, genera una propuesta breve basada en el diff.
 - Mostrar siempre el PR creado
+- Usar siempre `templates/pr-template.md` como base del body del PR.
+- Reemplazar el ticket por el ticket real antes de crear el PR.
+- Completar `Description`, `Steps` y `Notes` con informacion concreta del diff.
+- Si falta el ticket, pedirlo o dejar un marcador claro para completarlo.
