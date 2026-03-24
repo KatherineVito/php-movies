@@ -24,4 +24,16 @@ class PhpMovies
     {
         return $this->categories;
     }
+
+    public function removeCategory(string $category): void
+    {
+        $category = trim($category);
+        $key = array_search($category, $this->categories, true);
+
+        if ($key === false) {
+            throw new InvalidArgumentException("La categoria '{$category}' no existe.");
+        }
+
+        array_splice($this->categories, $key, 1);
+    }
 }
