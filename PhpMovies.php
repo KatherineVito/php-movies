@@ -24,6 +24,7 @@ class PhpMovies
     public function getMovies(): array
     {
         return $this->movies;
+    }
 
     public function addCategory(string $category): void
     {
