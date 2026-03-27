@@ -15,3 +15,4 @@ $phpMovies->addCategory('Ciencia ficcion');
 echo $phpMovies->helloWorld() . PHP_EOL;
 echo 'Categorias registradas: ' . implode(', ', $phpMovies->getCategories()) . PHP_EOL;
 
+echo 'Top 5 peliculas: ' . implode(', ', $phpMovies->getTopFiveMovies()) . PHP_EOL;
